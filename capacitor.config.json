@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Asstra",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

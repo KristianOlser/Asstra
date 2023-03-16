@@ -1,0 +1,8 @@
+{
+  "name": "Asstra",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "ee7968ce"
+}
