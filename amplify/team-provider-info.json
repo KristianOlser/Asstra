@@ -1,0 +1,31 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-asstraapp-dev-11257-authRole",
+      "UnauthRoleArn": "arn:aws:iam::661227048749:role/amplify-asstraapp-dev-11257-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::661227048749:role/amplify-asstraapp-dev-11257-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-asstraapp-dev-11257-deployment",
+      "UnauthRoleName": "amplify-asstraapp-dev-11257-unauthRole",
+      "StackName": "amplify-asstraapp-dev-11257",
+      "StackId": "arn:aws:cloudformation:eu-central-1:661227048749:stack/amplify-asstraapp-dev-11257/4ee31d00-c38f-11ed-9e54-06a0604eab18",
+      "AmplifyAppId": "d2m1njpapic2vd",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-asstraapp-dev-11257-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "asstraappf125f5af": {}
+      },
+      "api": {
+        "asstraapp": {},
+        "asstraApi": {}
+      },
+      "function": {
+        "getAssetFunction": {
+          "deploymentBucketName": "amplify-asstraapp-dev-11257-deployment",
+          "s3Key": "amplify-builds/getAssetFunction-587a544d4e47765a6765-build.zip"
+        }
+      }
+    }
+  }
+}

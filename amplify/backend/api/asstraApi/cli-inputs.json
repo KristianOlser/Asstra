@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "paths": {
+    "/getAsset/{asset}": {
+      "name": "/getAsset/{asset}",
+      "lambdaFunction": "getAssetFunction",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "read"
+        ]
+      }
+    }
+  }
+}

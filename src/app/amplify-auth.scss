@@ -1,0 +1,51 @@
+.amplify-container {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 20px;
+  }
+  
+  .amplify-form-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .amplify-sign-in-form {
+    margin-bottom: 20px;
+  }
+  
+  .amplify-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .amplify-button:hover {
+    background-color: #0069d9;
+  }
+  
+  .amplify-form-row {
+    margin-bottom: 20px;
+  }
+  
+  .amplify-form-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .amplify-form-input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .amplify-form-message {
+    color: #dc3545;
+    font-size: 16px;
+    margin-top: 10px;
+  }

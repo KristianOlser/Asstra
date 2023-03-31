@@ -1,0 +1,152 @@
+ion-menu-button {
+  color: #fff;
+}
+
+
+.inactive {
+  color: blue;
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10%;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+.displayHide{
+  display: none;
+}
+ion-input{
+  text-align: end;
+}
+div{
+  overflow: scroll;
+}
+ion-button{
+  --background: #838383;
+  --box-shadow: 0;
+  color: #fff;
+}
+ion-button.active{
+  --background: #fff;
+    color: black;
+}
+ion-back-button{
+  color:#fff;
+}
+ion-button#submit{
+  --background: #4bb543;
+  margin: 10% 5% 10% 5%;
+}
+ion-button.io#submit{
+  --background: #4bb543;
+  margin: 15px 5% 10px 5%;
+}
+ion-button.md#submit{
+  --background: #4bb543;
+  margin: 15px 5% 10px 5%;
+}
+ion-button.ios#small{
+  height: 20px;
+  margin: 0;
+}
+ion-button.md#small{
+  height: 20px;
+  margin: 0;
+}
+ion-col.ios#small{
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+ion-col.md#small{
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+ion-datetime{
+  color: #fff;
+}
+ion-item{
+  --background:#838383;
+  color: #fff;
+  border-radius: 10px 10px 10px 10px;
+}
+ion-img{
+  width: 30%;
+  margin: auto;
+}
+ion-title#logo{
+  font-size: 20px;
+  color: #fff;
+}
+ion-label#title{
+  color: #fff;
+  font-size: 26px;
+  text-align: left;
+}
+ion-label#value{
+  font-size: 20px;
+}
+ion-label#gain{
+  color: #4bb543;
+  font-size: 10px;
+}
+ion-label#lose{
+  color: #ff0033;
+  font-size: 10px;
+}
+ion-label#assetValue{
+  font-size: 10px;
+  padding-right: 5px;
+}
+ion-label#portfolioLabel{
+  font-size: 20 px;
+}
+ion-col#recFlex{
+  display: flex;
+  flex-direction: column;
+}
+ion-grid#enlarge{
+  background-color: #333333;
+  padding: 0;
+}
+ion-col#enlarge{
+  padding: 0;
+}
+
+ion-grid{
+  margin: 10% 5% 10% 5%;
+  background-color: #838383;
+  padding: 0 5px;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0;
+}
+
+ion-grid.ios{
+  margin: 10px 5% 10px 5%;
+}
+
+ion-grid.md{
+  margin: 10px 5% 10px 5%;
+}
+  
+  
