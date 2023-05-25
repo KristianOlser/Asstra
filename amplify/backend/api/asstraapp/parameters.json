@@ -1,5 +1,6 @@
 {
   "AppSyncApiName": "asstraapp",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2023-04-02T19:05:51.781Z"
 }

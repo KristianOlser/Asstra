@@ -5,8 +5,6 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Net.Http;
 
-using Amazon.DynamoDBv2;
-using Amazon.DynamoDBv2.DocumentModel;
 using Amazon.Lambda.Core;
 using Amazon.Lambda.APIGatewayEvents;
 using Newtonsoft.Json;

@@ -24,6 +24,10 @@
         "getAssetFunction": {
           "deploymentBucketName": "amplify-asstraapp-dev-11257-deployment",
           "s3Key": "amplify-builds/getAssetFunction-587a544d4e47765a6765-build.zip"
+        },
+        "getPortfolio": {
+          "deploymentBucketName": "amplify-asstraapp-dev-11257-deployment",
+          "s3Key": "amplify-builds/getPortfolio-67314976783447773957-build.zip"
         }
       }
     }

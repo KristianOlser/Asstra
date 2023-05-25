@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'signin',
     loadChildren: () => import('./signin/signin.module').then( m => m.SigninPageModule)
+  },
+  {
+    path: 'asset-detail',
+    loadChildren: () => import('./asset-detail/asset-detail.module').then( m => m.AssetDetailPageModule)
   }
 ];
 

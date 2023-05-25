@@ -10,6 +10,16 @@
           "read"
         ]
       }
+    },
+    "/portfolio": {
+      "name": "/portfolio",
+      "lambdaFunction": "getPortfolio",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "read"
+        ]
+      }
     }
   }
 }

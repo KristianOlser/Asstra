@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild , OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Chart } from 'chart.js/auto';
 import { API, Auth } from 'aws-amplify';
@@ -13,23 +13,24 @@ export class FolderPage implements OnInit {
   public chart: any;
   public chartData!: number[];
   public portfolios = [
-    { title: 'Portfolio one', url: '/portfolio-detail', icon: 'home', value: '$123.4K', gain: '+$1.5k (+1.8%)' },
-    { title: 'Portfolio two', url: '/portfolio-detail', icon: 'home', value: '$13.4K', gain: '+$1.1k (+1.8%)' },
-    { title: 'Stocks', url: '/portfolio-detail', icon: 'home', value: '$3.4K', gain: '+$1.1k (+1.8%)' },
-    { title: 'Crypto', url: '/portfolio-detail', icon: 'home', value: '$88.4K', gain: '+$1.1k (+1.8%)' },
+    { title: 'Portfolio one', url: '/portfolio-detail', icon: '../../assets/icon/icon.png', value: '$123.4K', gain: '+$1.5k (+1.8%)' },
+    { title: 'Portfolio two', url: '/portfolio-detail', icon: '../../assets/icon/icon.png', value: '$13.4K', gain: '+$1.1k (+1.8%)' },
+    { title: 'Stocks', url: '/portfolio-detail', icon: '../../assets/icon/icon.png', value: '$3.4K', gain: '+$1.1k (+1.8%)' },
+    { title: 'Crypto', url: '/portfolio-detail', icon: '../../assets/icon/icon.png', value: '$88.4K', gain: '+$1.1k (+1.8%)' },
 
   ];
   @ViewChild('chartCanvas')
   private chartCanvas!: ElementRef;
   public assetDate!: string;
+  public assetValue!: string;
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
   }
 
-  async ngAfterViewInit(){
-   await this.create_chart();
+  async ngAfterViewInit() {
+    await this.create_chart();
 
   }
   async create_chart() {
@@ -43,18 +44,25 @@ export class FolderPage implements OnInit {
           if (activeElements && activeElements.length) {
             const index = activeElements[0].index;
             this.assetDate = this.chart.data.labels[index];
+            this.assetValue = "$ " +this.chart.data.datasets[0].data[index];
+            
           }
-        },  
+        },
         scales: {
           y: {
             ticks: {
-              display: false
+              display: true
             }
           },
           x: {
             ticks: {
               display: false
             }
+          }
+        },
+        plugins: {
+          tooltip: {
+            enabled: false
           }
         }
       },
@@ -65,7 +73,7 @@ export class FolderPage implements OnInit {
             label: "Crypto",
             fill: true,
             tension: 0.1,
-            backgroundColor: 'red', 
+            backgroundColor: 'red',
             borderColor: 'red',
             borderCapStyle: 'butt',
             borderDash: [],
@@ -86,13 +94,17 @@ export class FolderPage implements OnInit {
         ]
       }
     });
+    console.log(this.chart.data);
+    const lengthIndex = this.chart.data.labels.length-1;
+    this.assetDate = this.chart.data.labels[lengthIndex];
+    this.assetValue = "$ " +this.chart.data.datasets[0].data[lengthIndex];
   }
   async callApi() {
     try {
       const apiName = 'asstraApi';
       const path = '/getAsset/1';
       const queryParams = {
-        dateType: '7d'
+        dateType: '1m'
       };
       const init = {
         headers: {
@@ -107,10 +119,14 @@ export class FolderPage implements OnInit {
       };
       const response = await API.get(apiName, path, init);
       console.log(response.data);
+      const userInfo = await Auth.currentUserInfo();
+      console.log(userInfo.id);
       return response.data;
     } catch (error) {
       console.error(error);
     }
+
+
   }
 
 }

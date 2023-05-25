@@ -68,7 +68,7 @@
               <ng-template>
                 <ion-datetime 
                   presentation="date"
-                  [(ngModel)]="date"
+                  [(ngModel)]="date",
                 ></ion-datetime>
               </ng-template>
             </ion-popover>
@@ -76,7 +76,7 @@
         </ion-col>
         <ion-col id="enlarge" style="padding-left:5px">
           <ion-item lines="none">
-            <ion-icon icon="home"></ion-icon>
+            <p style="color:white;">$</p>
             <ion-input type="number" placeholder="0"></ion-input>
           </ion-item>
         </ion-col>
@@ -87,18 +87,29 @@
       <ion-row>
         <ion-col id="enlarge" style="padding-right:5px">
           <ion-item>
-            <ion-icon icon="home"></ion-icon>
+            <p style="color:white;">QTY</p>
             <ion-input type="number" placeholder="0"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col id="enlarge" style="padding-left:5px">
           <ion-item>
-            <ion-icon icon="home"></ion-icon>
+            <p style="color:white;">FEE</p>
             <ion-input type="number" placeholder="0"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>     
     </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col id="enlarge">
+          <ion-item lines="none">
+            <p style="color:white;">SUMMARY $</p>
+            <ion-input type="number" placeholder="0"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
 
     <ion-button id="submit" expand="block">Submit</ion-button>
  </div>

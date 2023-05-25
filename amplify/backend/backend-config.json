@@ -9,6 +9,14 @@
           ],
           "category": "function",
           "resourceName": "getAssetFunction"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "getPortfolio"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -18,10 +26,15 @@
       "dependsOn": [],
       "output": {
         "authConfig": {
-          "additionalAuthenticationProviders": [],
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
           "defaultAuthentication": {
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
             },
             "authenticationType": "API_KEY"
           }
@@ -64,6 +77,11 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "getPortfolio": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "parameters": {
@@ -80,6 +98,22 @@
         {
           "category": "function",
           "resourceName": "getAssetFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_getPortfolio_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getPortfolio"
+        }
+      ]
+    },
+    "AMPLIFY_function_getPortfolio_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getPortfolio"
         }
       ]
     }

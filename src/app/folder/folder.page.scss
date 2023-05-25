@@ -1,7 +1,6 @@
 ion-menu-button {
   color: #fff;
 }
-
 #container {
   text-align: center;
   position: absolute;
@@ -9,23 +8,24 @@ ion-menu-button {
   right: 0;
   top: 10%;
 }
-
 #container strong {
   font-size: 20px;
   line-height: 26px;
 }
-
 #container p {
   font-size: 16px;
   line-height: 22px;
   color: #8c8c8c;
   margin: 0;
 }
-
 #container a {
   text-decoration: none;
 }
 ion-img{
+  width: 10%;
+  margin: auto;
+}
+ion-img.ios{
   width: 30%;
   margin: auto;
 }
@@ -34,7 +34,7 @@ ion-label#logo{
   font-size: 20px;
   color: #fff;
 }
-ion-label#value{
+ion-label#value, ion-label#name{
   font-size: 20px;
 }
 ion-label#gain{
@@ -48,23 +48,31 @@ ion-col#recFlex{
   display: flex;
   flex-direction: column;
 }
-ion-grid#assetGrid ion-card{
+ion-item#assetGrid ion-card{
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
   margin: 20% 5% 20% 5%;
 }
 
-ion-grid, ion-card{
+ion-grid#chart, ion-card, ion-item#assetGrid{
   background-color: #fff;
   padding: 0 5px;
   border-radius: 10px 10px 10px 10px;
   color: black;
 }
 
-ion-grid.ios#assetGrid, ion-card.ios {
+ion-item.ios#assetGrid, ion-card.ios {
   margin: 20px 5% 20px 5%;
 }
 
-ion-grid.md#assetGrid, ion-card.md {
+ion-item.md#assetGrid, ion-card.md {
   margin: 20px 5% 20px 5%;
 }
-
+ion-img#assetLogo::part(image) {
+  border-radius: 10px;
+}
+ion-img#assetLogo{
+  width: 4%;
+}
+ion-img.ios#assetLogo{
+  width: 15%;
+}

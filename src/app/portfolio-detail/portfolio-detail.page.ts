@@ -16,6 +16,12 @@ export class PortfolioDetailPage implements OnInit {
   @ViewChild('chartCanvas')
   private chartCanvas!: ElementRef;
   public chart: any;
+  public portfolios = [
+    { title: 'Bitcoin', symbol: 'BTC', url: '/asset-detail', icon: '../../assets/icon/icon.png', value: '$123.4K', gain: '+$1.5k (+1.8%)' },
+    { title: 'Ethereum', symbol: 'ETH', url: '/asset-detail', icon: '../../assets/icon/icon.png', value: '$13.4K', gain: '+$1.1k (+1.8%)' },
+    { title: 'Coin', symbol: 'Coin', url: '/asset-detail', icon: '../../assets/icon/icon.png', value: '$3.4K', gain: '+$1.1k (+1.8%)' },
+    { title: 'Apple', symbol: 'AAPL', url: '/asset-detail', icon: '../../assets/icon/icon.png', value: '$88.4K', gain: '+$1.1k (+1.8%)' },
+  ];
   constructor() {}
   
 

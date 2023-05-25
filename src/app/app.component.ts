@@ -15,9 +15,8 @@ Amplify.configure(awsconfig);
 export class AppComponent {
   public appPages = [
     { title: 'Home', url: '/folder/Home', icon: 'home' },
-    { title: 'Add Asset', url: '/folder/Add', icon: 'add' },
-    { title: 'Manage portfolio', url: '/folder/Favorites', icon: 'folder' },
-    { title: 'Settings', url: '/folder/Settings', icon: 'settings' },
+    { title: 'Add Asset', url: '/add-transaction', icon: 'add' },
+    { title: 'Settings', url: '/settings', icon: 'settings' },
   ];
   public labels = ['Portfolio one', 'Portfolio two', 'Portfolio three'];
   constructor(private router: Router) {}

@@ -14,7 +14,14 @@ ion-menu-button {
   right: 0;
   top: 10%;
 }
-
+ion-img{
+  width: 10%;
+  margin: auto;
+}
+ion-img.ios{
+  width: 30%;
+  margin: auto;
+}
 #container strong {
   font-size: 20px;
   line-height: 26px;
@@ -89,10 +96,6 @@ ion-item{
   --background:#838383;
   color: #fff;
   border-radius: 10px 10px 10px 10px;
-}
-ion-img{
-  width: 30%;
-  margin: auto;
 }
 ion-title#logo{
   font-size: 20px;
